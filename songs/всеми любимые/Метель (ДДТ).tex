@@ -1,0 +1,110 @@
+\songcolumns{1}
+
+\beginsong{Метель}[
+  by={ДДТ}]
+
+{\nolyrics Бой: $\down\q   \down \up \down \up$} 
+\medskip
+
+{\nolyrics Перебор: 4---2---1---2-3} 
+\medskip
+
+\gtab{Em}{022000}
+\gtab{C}{X32010}
+\gtab{G}{320003}
+\gtab{D}{XX0232}
+\medskip
+
+{\nolyrics Вступление: }
+\medskip
+
+\begin{lilypond}
+#(set-global-staff-size 16)
+#(set! paper-alist (cons '("my size" . (cons (* 2.5 in) (* 2 in))) paper-alist))
+
+
+PartpZeroVoiceZero =  \relative e, {
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \time 2/4 e8 \6 \mf g'8 \3 \mf <e' b>8
+  \1 \mf \2 \mf b,16 \5 \mf e16 \4 \mf | % 2
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \time 2/4 c8 \5 \mf e16 \4 \mf g16 \3
+  \mf g8 \4 \mf fis8 \4 \mf | % 3
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \time 2/4 g,4 \6 \mf g16 \6 \mf a16 \6
+  \mf b16 \5 \mf c16 \5 \mf | % 4
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \time 2/4 d8 \4 \mf a'16 \3 \mf d16 \2
+  \mf e16 \1 \mf d16 \2 \mf a8 \3 \mf | % 5
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \time 2/4 e,8 \6 \mf g'8 \3 \mf <e' b>8
+  \1 \mf \2 \mf b,16 \5 \mf e16 \4 \mf | % 6
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \time 2/4 c8 \5 \mf e16 \4 \mf g16 \3
+  \mf g8 \4 \mf fis8 \4 \mf | % 7
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \time 2/4 b4 \4 \mf b4 \4 \mf | % 8
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \time 2/4 d,16 \4 \mf a'16 \3 \mf d8 \2
+  \mf e8 \1 \mf d16 \2 \mf a16 \3 \mf
+}
+
+
+   \new TabStaff {
+     
+    %\tabFullNotation
+    \PartpZeroVoiceZero
+   }
+
+\end{lilypond}
+
+
+\beginverse
+\[Em] Коро\[C]нована лу\[G D]ной, как начало --- высока,
+Как победа --- не со мной, как надежда --- не легка.
+\medskip
+
+За окном стеной метель, жизнь по горло занесло,
+Сорвало финал с петель, да поела все тепло.
+\endverse
+
+
+\beginchorus
+Играй, как можешь, сыграй,
+Закрой глаза и вернись,
+Не пропади, но растай
+Да колее поклонись.
+\medskip
+
+Моё окно отогрей,
+Пусти по полю весной,
+Не доживи, но созрей,
+И будешь вечно со мной, \rep 3
+Со мной.
+\endchorus
+
+\beginverse*
+{\nolyrics Проигрыш: \dittotikz \ , как во вступлении}
+\endverse
+
+
+\beginverse
+Ищут землю фонари, к небу тянется свеча,
+На снегу следы зари --- крылья павшего луча.
+\medskip
+
+Что же, вьюга, наливай, выпьем время натощак,
+Я спою, ты в такт пролай о затерянных вещах.
+\endverse
+
+
+\beginverse
+Осторожно, не спеша, с белым ветром на груди,
+Где у вмёрзшей в лёд ладьи ждёт озябшая душа.
+\endverse
+
+\endsong
+
+\beginscripture{}
+Первые половины всех куплетов играются соло партией из вступления, вторые половины --- боем. Припев играется перебором.
+\endscripture
