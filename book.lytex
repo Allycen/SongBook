@@ -88,7 +88,7 @@
 \newcommand*{\EXPLAINED}{}%
 \usepackage{graphics}
 \begin{document}
-
+ 
 
 \indexsongsas{titleidx1}{\thepage}
 \showindex{Отрядные}{titleidx1}
