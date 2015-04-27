@@ -146,7 +146,7 @@
 
 % ----- ОСНОВНЫЕ БОИ ------ 
 
-{\nolyrics Бой: $\down\q   \down \up\q   \down \up \down$} %6-ка
+{\nolyrics Бой: $\down\q   \down \up\q   \up \down \up $} %6-ка
 
 {\nolyrics Бой: $\down\q   \down\q   \up\ \up \down\q   \down \up \down \up$} % Гореть (Люмен)
 
@@ -172,6 +172,13 @@
 % ----- ВСТАВКА ДОП. ИНФЫ -----
 {\nolyrics Вступление: }
 {\nolyrics Проигрыш: }
+
+\hspace{53pt} % для проигрыша
+
+\beginscripture{}
+\endscripture
+
+\songcolumns{2}
 
 
 
