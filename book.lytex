@@ -1,5 +1,5 @@
 
-\documentclass[letterpaper]{book}
+\documentclass[letterpaper]{article}
 \usepackage{eso-pic,graphicx}
 
 \usepackage[T2A]{fontenc}
@@ -7,20 +7,44 @@
 \usepackage[bookmarks]{hyperref}
 \usepackage[chorded]{songs}
 
-% \includeonlysongs{2}
 
-\setlength{\oddsidemargin}{0in}
-\setlength{\evensidemargin}{0in}
-\setlength{\textwidth}{6.5in}
-\setlength{\topmargin}{0in}
-\setlength{\topskip}{0in}
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
-\setlength{\textheight}{9.1in}
-\settowidth{\versenumwidth}{1.\ }
+% РАСПОЛОЖЕНИЕ
+\setlength{\oddsidemargin}{-0.3in} % - влево + вправо (default 0in)
+\setlength{\evensidemargin}{10in} % хз
+\setlength{\textwidth}{7.1in} %  - уже + шире (в два раза меньше по сравнению с oddsidemargin!)(default 6.5in)
+\setlength{\topmargin}{-0.35in} % - выше + ниже (default 0in)
+\setlength{\topskip}{0.0in} % (default 0in)
+\setlength{\headheight}{0in} % (default 0in)
+\setlength{\headsep}{0in} % (default 0in)
+\setlength{\textheight}{9.8in} % - ниже + длиннее (default 9.1in)
+\settowidth{\versenumwidth}{1.\ } % (default 1.\)
+
+
+% РАЗМЕР ТЕКСТА
+
+% куплеты, припевы
+\renewcommand{\lyricfont}{%
+  \fontsize{12pt}{12pt}
+  \selectfont
+}
+
+% название песни
+%\renewcommand{\stitlefont}{
+  %\fontfamily{sf} 
+  %\fontseries{sf} % sans-serif
+  %\fontshape{sl} % наклонный
+  %\fontsize{14pt}{14pt}
+  %\selectfont
+  %\sffamily\slshape\Large
+ % \sffamily\slshape\fontsize{18pt}{18zpt}
+%}
+
+
+
 
 % вкючена нумерация страниц
 \pagestyle{plain}
+%\pagestyle{empty}
 \sepindexesfalse
 
 % многоточие в слове считается сиволом для аккордов
@@ -117,28 +141,28 @@
 \newpage
 
 
-\songchapter{Отрядные}
+%\songchapter{Отрядные}
 \begin{songs}{titleidx1,authidx1,scripidx1}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{OTRYAD_SONGS.txt}
 \end{songs}
 
 
-\songchapter{Сачок}
+%\songchapter{Сачок}
 \begin{songs}{titleidx2,authidx2,scripidx2}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{SOCKO_SONGS.txt}
 \end{songs}
 
 
-\songchapter{Лагерные}
+%\songchapter{Лагерные}
 \begin{songs}{titleidx3,authidx3,scripidx3}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{CAMP_SONGS.txt}
 \end{songs}
 
 
-\songchapter{Всеми любимые}
+%\songchapter{Всеми любимые}
 \begin{songs}{titleidx4,authidx4,scripidx4}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{LOVE_SONGS.txt}
