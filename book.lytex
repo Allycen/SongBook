@@ -1,5 +1,5 @@
 
-\documentclass[letterpaper]{article}
+\documentclass[a4paper]{article}
 \usepackage{eso-pic,graphicx}
 
 \usepackage[T2A]{fontenc}
@@ -9,14 +9,16 @@
 
 
 % РАСПОЛОЖЕНИЕ
-\setlength{\oddsidemargin}{-0.3in} % - влево + вправо (default 0in)
-\setlength{\evensidemargin}{10in} % хз
-\setlength{\textwidth}{7.1in} %  - уже + шире (в два раза меньше по сравнению с oddsidemargin!)(default 6.5in)
-\setlength{\topmargin}{-0.35in} % - выше + ниже (default 0in)
+
+% отступ в 1 inch (2.54cm) по ширине и высоте по умолчанию
+\setlength{\oddsidemargin}{-0.35in} % - влево + вправо (default 0in)
+\setlength{\evensidemargin}{0in} % хз
+\setlength{\textwidth}{6.97in} %  - уже + шире (в два раза меньше по сравнению с oddsidemargin!)(default 6.5in)
+\setlength{\topmargin}{-0.3in} % - выше + ниже (default 0in)
 \setlength{\topskip}{0.0in} % (default 0in)
 \setlength{\headheight}{0in} % (default 0in)
 \setlength{\headsep}{0in} % (default 0in)
-\setlength{\textheight}{9.8in} % - ниже + длиннее (default 9.1in)
+\setlength{\textheight}{10.23in} % - ниже + длиннее (default 9.1in)
 \settowidth{\versenumwidth}{1.\ } % (default 1.\)
 
 
@@ -24,26 +26,27 @@
 
 % куплеты, припевы
 \renewcommand{\lyricfont}{%
-  \fontsize{12pt}{12pt}
+  \fontsize{11pt}{11pt}
   \selectfont
 }
 
+
+
 % название песни
-%\renewcommand{\stitlefont}{
+\renewcommand{\stitlefont}{
   %\fontfamily{sf} 
   %\fontseries{sf} % sans-serif
   %\fontshape{sl} % наклонный
   %\fontsize{14pt}{14pt}
   %\selectfont
-  %\sffamily\slshape\Large
- % \sffamily\slshape\fontsize{18pt}{18zpt}
-%}
+  \sffamily\slshape\LARGE
+}
 
 
 
 
 % вкючена нумерация страниц
-\pagestyle{plain}
+%\pagestyle{plain}
 %\pagestyle{empty}
 \sepindexesfalse
 
@@ -56,6 +59,8 @@
 % для описания в конце песни
 \renewcommand{\scripturefont}{\sffamily\it}
 
+
+
 % знак повтора
 \usepackage{tikz}
 \newcommand{\dittotikz}{%
@@ -67,13 +72,33 @@
     }%
 }
 
+% стиль для стрелочек
+\usepackage{MnSymbol}
+
 % упрощаем стрелочки, пробелы
-\newcommand*{\up}{\uparrow}
+\newcommand*{\up}{\uparrow} 
+\newcommand*{\upx}{\upmapsto} % приглушка вверх
+\newcommand*{\ups}{\dasheduparrow} % незвучащая вверх
 \newcommand*{\down}{\downarrow}
+\newcommand*{\downx}{\downmapsto} % приглушка вниз
+\newcommand*{\downs}{\dasheddownarrow} % незвучащая вниз
 \newcommand*{\q}{\quad}
 
 
 
+
+% стрелочки 
+% круговая  (mathabx)
+% \circlearrowright 
+
+ 
+ %(MnSymbol) вверх-вниз
+ % \dasheduparrow
+% \dasheddownarrow
+% \uparrow
+% \downarrow
+% \upspoon
+% \downspoon
 
 % ---------------- ГЛАВЫ ПЕСЕННИКА ----------------
 
@@ -141,28 +166,32 @@
 \newpage
 
 
-%\songchapter{Отрядные}
+\songsection{Отрядные}
+\newpage
 \begin{songs}{titleidx1,authidx1,scripidx1}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{OTRYAD_SONGS.txt}
 \end{songs}
 
 
-%\songchapter{Сачок}
+\songsection{Сачок}
+\newpage
 \begin{songs}{titleidx2,authidx2,scripidx2}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{SOCKO_SONGS.txt}
 \end{songs}
 
 
-%\songchapter{Лагерные}
+\songsection{Лагерные}
+\newpage
 \begin{songs}{titleidx3,authidx3,scripidx3}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{CAMP_SONGS.txt}
 \end{songs}
 
 
-%\songchapter{Всеми любимые}
+\songsection{Всеми любимые}
+\newpage
 \begin{songs}{titleidx4,authidx4,scripidx4}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{LOVE_SONGS.txt}
@@ -193,8 +222,8 @@
 
 {\nolyrics Перебор: 5---[4 3 2] \, 4---[4 3 2]} % Разговор со счастьем (к/ф "Иван Вас..")
 
-
-
+$\largestar$
+{\nolyrics Бой: $\downs\q   \downx \up\q   \ups \down \up $} %6-ка
 
 % ----- ВСТАВКА ДОП. ИНФЫ -----
 {\nolyrics Вступление: }
@@ -210,11 +239,12 @@
 
 
 
+
 % ----- ВСТАВКА ТАБУЛАТУРЫ -----
 \medskip
 \begin{lilypond}
 #(set-global-staff-size 16)
-#(set! paper-alist (cons '("my size" . (cons (* 2.5 in) (* 2 in))) paper-alist))
+#(set! paper-alist (cons '("my size" . (cons (* 3.0 in) (* 2 in))) paper-alist))
 
 % если песня в ДВЕ колонки
 \paper {
@@ -233,7 +263,6 @@ PartpZeroVoiceZero =  \relative b, {
 
 \end{lilypond}
 \bigskip % ставится, если табы умещаются в одну строку
-
 
 
 

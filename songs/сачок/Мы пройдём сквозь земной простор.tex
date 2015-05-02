@@ -10,8 +10,8 @@
 	\gtab{Am}{X02210}
 	\gtab{B7}{X21202}
 	\gtab{C}{X32010}
-
 	\gtab{D}{XX0232}
+
 	\gtab{G}{320003}
 	\medskip
 \else 
@@ -24,10 +24,11 @@
 \bigskip
 \begin{lilypond}
 #(set-global-staff-size 16)
-#(set! paper-alist (cons '("my size" . (cons (* 2.5 in) (* 2 in))) paper-alist))
+#(set! paper-alist (cons '("my size" . (cons (* 3.2 in) (* 2 in))) paper-alist))
 
 \paper {
   #(set-paper-size "my size")
+  indent = 0 
 }
 
 
