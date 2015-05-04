@@ -1,0 +1,146 @@
+\beginsong{Белая гвардия}[
+  by={Белая гвардия}]
+
+
+{\nolyrics Бой: $\down\q   \down \up\q   \up \down \up $}
+\bigskip
+
+\gtab{Am}{002210}
+\gtab{D}{XX0232}
+\gtab{G}{320003}
+\gtab{C}{X32010}
+\gtab{Am}{002210}
+
+\gtab{B7}{X21202}
+\gtab{Em}{022000}
+\gtab{D7}{XX0212}
+\gtab{Am7}{002010}
+\bigskip
+
+
+
+{\nolyrics Вступление: }
+\bigskip
+
+\begin{lilypond}
+#(set-global-staff-size 16)
+#(set! paper-alist (cons '("my size" . (cons (* 3.2 in) (* 2 in))) paper-alist))
+
+% если песня в ДВЕ колонки
+\paper {
+  #(set-paper-size "my size")
+  indent = 0
+}
+
+PartpZeroVoiceZero =  \relative d'' {
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 d8 \1
+  \mf c4 \1 \mf e,2 \1 \mf r8 \mf | % 2
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 c4 \3
+  \mf d8 \3 \mf e4 \2 \mf fis8 \2 \mf g4 \2 \mf | % 3
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 c8 \1
+  \mf b4 \1 \mf d,2 \3 \mf r8 \mf | % 4
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 c4 \3
+  \mf d8 \3 \mf e4 \2 \mf fis8 \2 \mf g4 \2 \mf | % 5
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 b8 \1 \f
+  a4 \1 \f c,2 \3 \f r8 \f | % 6
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 a4 \3
+  \mf b8 \3 \mf cis4 \2 \mf dis8 \2 \mf e4 \2 \mf | % 7
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 g2 \1
+  \mf r2 \mf
+}
+
+
+   \new TabStaff {
+    %\tabFullNotation
+    \PartpZeroVoiceZero
+   }
+
+\end{lilypond}
+\bigskip
+
+\beginverse
+\[Em]Белая гвардия, белый снег
+\[Am7]Белая музыка революции,
+\[D7]Белая женщина, нервный смех,
+\[G]Белого платья слегка коснуться.
+\bigskip
+
+Белой рукой распахнуть окно,
+Белого света в нём не видя,
+Белое выпить до дна вино,
+В красную улицу в белом выйти.
+\endverse
+
+
+\beginchorus
+\[Em]Когда ты вернёшься ---
+Всё будет \[Am]иначе и нам не узнать друг друга,
+\[D7]Когда ты вернёшься, 
+А я не \[G]жена и даже не подруга.
+\bigskip
+
+\[C]Когда ты вернёшься ко мне, 
+Так \[Am]безумно тебя любившей в прошлом,              
+\[B7]Когда ты вернёшься ---
+Увидишь, что \[Em]жребий давно и не нами брошен.
+\endchorus
+
+\beginverse*
+{\nolyrics Проигрыш: \[Am] \[D] \[G] \[C] \[Am] \[B7] \[Em]}
+\endverse
+
+\beginverse
+Сизые сумерки прошлых лет
+Робко крадутся по переулкам.
+В этом окне еле брезжит свет.
+Ноты истерзанны, звуки гулки.
+\bigskip
+
+Тонкие пальцы срывают аккорд.
+Нам не простят безрассудного дара.
+Бьются в решетку стальных ворот
+Пять океанов земного шара.
+\endverse
+
+
+\beginverse
+Красный трамвай простучал в ночи.
+Красный закат догорел в бокале.
+Красные--красные кумачи
+С красных деревьев на землю пали.
+\bigskip
+
+Я не ждала тебя в Октябре.
+Виделись сны, я листала сонник.
+Красные лошади на заре
+Бились копытами о подоконник.
+\endverse
+
+
+\beginchorus
+Когда ты вернёшься --- 
+Всё будет иначе, и нам не узнать друг друга,
+Когда ты вернёшься, 
+А я не жена и даже не подруга.
+\bigskip
+
+Когда ты вернёшься, 
+Вернёшься в наш город обетованный.
+Когда ты вернёшься, 
+Такой невозможный и такой желанный.
+\endchorus
+
+\endsong
+
+
+
+
+
+

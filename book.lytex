@@ -223,7 +223,7 @@
 {\nolyrics Перебор: 5---[4 3 2] \, 4---[4 3 2]} % Разговор со счастьем (к/ф "Иван Вас..")
 
 $\largestar$
-{\nolyrics Бой: $\downs\q   \downx \up\q   \ups \down \up $} %6-ка
+{\nolyrics Бой: $\downs\q   \downx \up\q   \ups \down \up $}
 
 % ----- ВСТАВКА ДОП. ИНФЫ -----
 {\nolyrics Вступление: }
@@ -244,11 +244,12 @@ $\largestar$
 \medskip
 \begin{lilypond}
 #(set-global-staff-size 16)
-#(set! paper-alist (cons '("my size" . (cons (* 3.0 in) (* 2 in))) paper-alist))
+#(set! paper-alist (cons '("my size" . (cons (* 3.2 in) (* 2 in))) paper-alist))
 
 % если песня в ДВЕ колонки
 \paper {
   #(set-paper-size "my size")
+  indent = 0
 }
 
 
@@ -372,7 +373,7 @@ PartpZeroVoiceZero =  \relative b, {
 \gtab{Fm7}{131111}
 \gtab{F#m7}{2:131111}
 \gtab{Gm7}{3:131111}
-\gtab{G#m7}{4:131111}
+\gtab{G#m7}{4:131141}
 \bigskip
 \bigskip
 
