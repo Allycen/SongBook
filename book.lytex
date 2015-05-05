@@ -74,6 +74,7 @@
 
 % стиль для стрелочек
 \usepackage{MnSymbol}
+\usepackage{marvosym} % for male female symbols
 
 % упрощаем стрелочки, пробелы
 \newcommand*{\up}{\uparrow} 
@@ -230,13 +231,13 @@ $\largestar$
 {\nolyrics Проигрыш: }
 
 \hspace{53pt} % для проигрыша
+\hspace{62pt} % для вступления
+\hspace{29.4pt} % для коды
 
 \beginscripture{}
 \endscripture
 
 \songcolumns{2}
-
-
 
 
 

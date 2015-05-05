@@ -1,0 +1,103 @@
+\beginsong{Романс}[
+  by={Сплин}]
+
+{\nolyrics Перебор: 4---3---2---1---2---3---1---2}
+\bigskip
+
+\gtab{A7}{X02020}
+\gtab{Dm}{XX0231}
+\gtab{A}{X02220}
+\gtab{Gm}{3:133111}
+\gtab{F}{133211}
+\bigskip
+
+
+{\nolyrics Вступление: }
+\medskip
+\begin{lilypond}
+#(set-global-staff-size 16)
+#(set! paper-alist (cons '("my size" . (cons (* 3.2 in) (* 2 in))) paper-alist))
+
+% если песня в ДВЕ колонки
+\paper {
+  #(set-paper-size "my size")
+  indent = 0
+}
+
+
+PartpZeroVoiceZero =  \relative e {
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 \repeat
+  volta 2 {
+    e8 \4 \f g8 \3 \f cis8 \2 \f e8 \1 \f cis8 \2 \f g8 \3 \f e'8 \1
+    \f cis8 \2 \f | % 2
+    \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count
+    = #6 \startStaff \key c \major \numericTimeSignature\time 4/4 d,8
+    \4 \f a'8 \3 \f d8 \2 \f e16 \1 \f f16 \1 \mf d8 \2 \f a8 \3 \f
+    a'8 \1 \f d,8 \2 \f
+  }
+  | % 3
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 g,8 \3
+  \f d'8 \2 \f g8 \1 \f a16 \1 \f ais16 \1 \mf g8 \1 \f d8 \2 \f ais'8
+  \1 \f g8 \1 \f | % 4
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 f,8 \4
+  \f a8 \3 \f c8 \2 \f e16 \1 \f f16 \1 \mf c8 \2 \f a8 \3 \f f'8 \1
+  \f c8 \2 \f | % 5
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 g8 \3 \f
+  d'8 \2 \f g8 \1 \f ais8 \1 \f e,8 \4 \f a8 \3 \f cis8 \2 \f e8 \1 \f
+  | % 6
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 d,8 \4
+  \f a'8 \3 \f d8 \2 \f e16 \1 \f f16 \1 \mf d8 \2 \f a8 \3 \f a'8 \1
+  \f d,8 \2 \f
+}
+
+
+   \new TabStaff {
+    %\tabFullNotation
+    \PartpZeroVoiceZero
+   }
+
+\end{lilypond}
+\bigskip % ставится, если табы умещаются в одну строку
+
+\beginverse
+\[A7] И лампа не го\[Dm]рит, 
+\[A7] И врут календа\[Dm]ри, 
+\[Gm] И если ты дав\[F]но хотела 
+Что--то мне ска\[Gm]зать,
+\[A]То \[Dm]говори.
+\bigskip
+
+Любой обманчив звук, страшнее --- тишина,
+Когда в самый разгар веселья падает из рук
+Бокал вина.
+\bigskip
+
+И чёрный кабинет,
+И ждёт в стволе патрон,
+Так тихо, что я слышу, как идёт на глубине
+Вагон метро.
+\endverse
+
+\beginverse*
+{\nolyrics Проигрыш: \[Gm F Gm A Dm]}
+\endverse
+
+\beginverse
+На площади полки, темно в конце строки,
+И в телефонной трубке, эти много лет спустя,
+Одни гудки.
+\bigskip
+
+И где--то хлопнет дверь, и дрогнут провода.
+<<Привет! Мы будем счастливы теперь
+И навсегда>>. \rep 2
+\endverse
+
+
+\endsong
+
