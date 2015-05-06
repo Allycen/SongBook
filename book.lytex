@@ -56,7 +56,7 @@
 % аккорды генерируют пробелы, если не вмещаются под словом
 \MultiwordChords
 
-% для описания в конце песни
+% для описания в конце песни (изменяем стиль)
 \renewcommand{\scripturefont}{\sffamily\it}
 
 
@@ -78,28 +78,30 @@
 
 % упрощаем стрелочки, пробелы
 \newcommand*{\up}{\uparrow} 
-\newcommand*{\upx}{\upmapsto} % приглушка вверх
-\newcommand*{\ups}{\dasheduparrow} % незвучащая вверх
+\newcommand*{\upx}{\upmapsto}           % приглушка вверх
+\newcommand*{\ups}{\dasheduparrow}      % незвучащая вверх
 \newcommand*{\down}{\downarrow}
-\newcommand*{\downx}{\downmapsto} % приглушка вниз
-\newcommand*{\downs}{\dasheddownarrow} % незвучащая вниз
+\newcommand*{\downx}{\downmapsto}       % приглушка вниз
+\newcommand*{\downs}{\dasheddownarrow}  % незвучащая вниз
 \newcommand*{\q}{\quad}
 
+% вертикальные отступы
+\newcommand{\ptk}{\vspace{6pt}}   % pre touch skip (перед слд. боем или перебором)
+\newcommand{\pchk}{\vspace{9pt}}  % pre chord skip (перед аккордами)
+\newcommand{\psk}{\vspace{15pt}}  % pre song skip (перед началом песни)
+\newcommand{\plik}{\vspace{7pt}}  % pre lilypond skip (перед табулатурой lilypond)
+
+\newcommand{\bqk}{\vspace{10pt}}  % between quatrain skip (оступ между четверостишьями)
 
 
+% горизонтальный отступ 
+%  TODO (у табулатуры - напротив аккорда)
 
-% стрелочки 
-% круговая  (mathabx)
-% \circlearrowright 
 
- 
- %(MnSymbol) вверх-вниз
- % \dasheduparrow
-% \dasheddownarrow
-% \uparrow
-% \downarrow
-% \upspoon
-% \downspoon
+% количество аккордов перед переходом на слд. строку
+% a) две колонки - 5
+% б) одна колонка - 12
+
 
 % ---------------- ГЛАВЫ ПЕСЕННИКА ----------------
 
@@ -242,29 +244,8 @@ $\largestar$
 
 
 % ----- ВСТАВКА ТАБУЛАТУРЫ -----
-\medskip
-\begin{lilypond}
-#(set-global-staff-size 16)
-#(set! paper-alist (cons '("my size" . (cons (* 3.2 in) (* 2 in))) paper-alist))
-
-% если песня в ДВЕ колонки
-\paper {
-  #(set-paper-size "my size")
-  indent = 0
-}
 
 
-PartpZeroVoiceZero =  \relative b, {
-  g4
-}
-
-   \new TabStaff {
-    %\tabFullNotation
-    \PartpZeroVoiceZero
-   }
-
-\end{lilypond}
-\bigskip % ставится, если табы умещаются в одну строку
 
 
 

@@ -3,56 +3,11 @@
 \beginsong{Гореть}[
   by={Люмен}]
 
-  {\nolyrics Бой: $\down\q   \down\q   \up\ \up \down\q   \down \up \down \up$} 
-  \medskip
-
-\gtab{Dm}{XX0231}
-\gtab{Am}{X02210}
-\gtab{C}{X32010}
-\gtab{G}{320003}
-\medskip
-
-{\nolyrics Вступление: }
-\medskip
-
-\begin{lilypond}
-#(set-global-staff-size 16)
-#(set! paper-alist (cons '("my size" . (cons (* 2.5 in) (* 2 in))) paper-alist))
-
-PartpZeroVoiceZero =  \relative a, {
-  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
-  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 a16 \5
-  \f c'16 \4 \mf g'16 \3 \f a,,16 \5 \f c'16 \4 \mf e16 \3 \f a,,16 \5
-  \f c'16 \4 \mf f16 \3 \f a,,16 \5 \f c'16 \4 \mf e16 \3 \f c16 \4
-  \mf a,16 \5 \mf e''16 \3 \f g,16 \5 \f | % 2
-  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
-  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 g16 \5
-  \f c16 \4 \mf g'16 \3 \f g,16 \5 \f c16 \4 \mf e16 \3 \f g,16 \5 \f
-  c16 \4 \mf f16 \3 \f g,16 \5 \f c16 \4 \mf e16 \3 \f c16 \4 \mf g16
-  \5 \f e'16 \3 \f c16 \4 \mf | % 3
-  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
-  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 f,16 \5
-  \f c'16 \4 \mf g'16 \3 \f f,16 \5 \f c'16 \4 \mf e16 \3 \f f,16 \5
-  \f c'16 \4 \mf f16 \3 \f f,16 \5 \f c'16 \4 \mf e16 \3 \f c16 \4 \f
-  f,16 \5 \f e'16 \3 \f c16 \4 \f | % 4
-  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
-  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 d,16 \5
-  \f a'16 \4 \f g16 \3 \f d16 \5 \f a'16 \4 \f g16 \3 \f d16 \5 \f a'16
-  \4 \f d,16 \5 \f a'16 \4 \f g16 \3 \f d16 \5 \f a'16 \4 \f g16 \3 \f
-  d16 \5 \f a'16 \4 \f
-}
-
-   \new TabStaff {
-     
-    %\tabFullNotation
-    \PartpZeroVoiceZero
-   }
-\end{lilypond}
-%\medskip
-
+{\nolyrics Бой: $\down\q   \down\q   \up\ \up \down\q   \down \up \down \up$} 
+\ptk
 
 {\nolyrics Перебор: }
-\medskip
+\plik
 
 \begin{lilypond}
 #(set-global-staff-size 16)
@@ -112,7 +67,57 @@ PartpZeroVoiceZero =  \relative a, {
     \PartpZeroVoiceZero
    }
 \end{lilypond}
-\medskip
+%\pchk
+
+
+\gtab{Dm}{XX0231}
+\gtab{Am}{X02210}
+\gtab{C}{X32010}
+\gtab{G}{320003}
+\psk
+
+\beginverse*
+{\nolyrics Вступление: }
+\endverse
+\plik
+
+\begin{lilypond}
+#(set-global-staff-size 16)
+#(set! paper-alist (cons '("my size" . (cons (* 2.5 in) (* 2 in))) paper-alist))
+
+PartpZeroVoiceZero =  \relative a, {
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 a16 \5
+  \f c'16 \4 \mf g'16 \3 \f a,,16 \5 \f c'16 \4 \mf e16 \3 \f a,,16 \5
+  \f c'16 \4 \mf f16 \3 \f a,,16 \5 \f c'16 \4 \mf e16 \3 \f c16 \4
+  \mf a,16 \5 \mf e''16 \3 \f g,16 \5 \f | % 2
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 g16 \5
+  \f c16 \4 \mf g'16 \3 \f g,16 \5 \f c16 \4 \mf e16 \3 \f g,16 \5 \f
+  c16 \4 \mf f16 \3 \f g,16 \5 \f c16 \4 \mf e16 \3 \f c16 \4 \mf g16
+  \5 \f e'16 \3 \f c16 \4 \mf | % 3
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 f,16 \5
+  \f c'16 \4 \mf g'16 \3 \f f,16 \5 \f c'16 \4 \mf e16 \3 \f f,16 \5
+  \f c'16 \4 \mf f16 \3 \f f,16 \5 \f c'16 \4 \mf e16 \3 \f c16 \4 \f
+  f,16 \5 \f e'16 \3 \f c16 \4 \f | % 4
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 d,16 \5
+  \f a'16 \4 \f g16 \3 \f d16 \5 \f a'16 \4 \f g16 \3 \f d16 \5 \f a'16
+  \4 \f d,16 \5 \f a'16 \4 \f g16 \3 \f d16 \5 \f a'16 \4 \f g16 \3 \f
+  d16 \5 \f a'16 \4 \f
+}
+
+   \new TabStaff {
+     
+    %\tabFullNotation
+    \PartpZeroVoiceZero
+   }
+\end{lilypond}
+
+
+
+
 
 \beginverse
 Зачем кричать, когда никто не слышит, о чём мы говорим?
@@ -150,7 +155,7 @@ PartpZeroVoiceZero =  \relative a, {
 Стоять или бежать, но все равно гореть.
 Огромный синий кит порвать не может сеть.
 Сдаваться или нет, но всё равно гореть!
-\medskip
+\bqk
 
 Мы можем помолчать, мы можем петь,
 Стоять или бежать, но всё равно гореть.

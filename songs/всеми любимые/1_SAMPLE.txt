@@ -2,11 +2,9 @@
   by={}]
 
 
-\ifdefined\EXPLAINED
+\bigskip
 
-\else 
-
-\fi
+\bigskip
 
 
 \beginverse

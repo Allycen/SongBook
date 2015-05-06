@@ -4,37 +4,30 @@
   by={Ария}]
 
 
-\ifdefined\EXPLAINED
+{\nolyrics Бой: $\down\q   \down\q   \up\ \up \down\q   \down \up \down \up$}
+\pchk
 
-	{\nolyrics Бой: $\down\q   \down\q   \up\ \up \down\q   \down \up \down \up$}
-	\medskip
+\gtab{Am7}{X02213}
+\gtab{D7}{XX0212}
+\gtab{C}{X32010}
+\gtab{G}{320003}
+\gtab{Am}{X02210}
+\gtab{Dm}{XX0231}
+\gtab{Bm7}{020202}
+\gtab{E7}{020100}
+\gtab{D}{XX0232}
+\gtab{A}{X02220}
+\gtab{F}{133211}
+\gtab{F7}{131211}
+\psk
 
-	\gtab{Am7}{X02213}
-	\gtab{D7}{XX0212}
-	\gtab{C}{X32010}
-	\gtab{G}{320003}
-	\gtab{Am}{X02210}
-	\gtab{Dm}{XX0231}
-	\gtab{Bm7}{020202}
-	\gtab{E7}{020100}
-	\gtab{D}{XX0232}
-	\gtab{A}{X02220}
-
-	\gtab{F}{133211}
-	\gtab{F7}{131211}
-	\medskip
-
-\else 
-
-\fi
-
-
+\beginverse*
 {\nolyrics Вступление: }
-\medskip
+\endverse
+\plik
 
 \begin{lilypond}
 #(set-global-staff-size 16)
-#(set! paper-alist (cons '("my size" . (cons (* 2.5 in) (* 2 in))) paper-alist))
 
 PartpZeroVoiceZero =  \relative e' {
   \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
@@ -96,9 +89,9 @@ PartpZeroVoiceZero =  \relative e' {
    }
 
 \end{lilypond}
-\bigskip
 
-\beginverse   
+
+\beginverse
 \[Am7] От края до края \[D7]небо в огне сгорает,
 \[F7] И в нём исчезают все на\[C]дежды и меч\[G]ты.
 Но ты засыпаешь, и ангел к тебе слетает.
@@ -116,7 +109,6 @@ PartpZeroVoiceZero =  \relative e' {
 \beginverse*
 {\nolyrics Проигрыш: \[Am7 D7 F7 C G]}
 \endverse
-
 
 
 \beginverse
@@ -138,8 +130,6 @@ PartpZeroVoiceZero =  \relative e' {
 В \[Bm7]мире снов, в \[E7]мире снов, в \[G]мире снов, \rep 2
 все на\[D]дежды и меч\[A]ты.
 \endverse
-
-% Проигрыш: Am D F C G
 
 \endsong
 
