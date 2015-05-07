@@ -90,8 +90,7 @@
 \newcommand{\pchk}{\vspace{9pt}}  % pre chord skip (перед аккордами)
 \newcommand{\psk}{\vspace{15pt}}  % pre song skip (перед началом песни)
 \newcommand{\plik}{\vspace{7pt}}  % pre lilypond skip (перед табулатурой lilypond)
-
-\newcommand{\bqk}{\vspace{10pt}}  % between quatrain skip (оступ между четверостишьями)
+\newcommand{\bqk}{\vspace{11pt}}  % between quatrain skip (оступ между четверостишьями)
 
 
 % горизонтальный отступ 
@@ -244,7 +243,6 @@ $\largestar$
 
 
 % ----- ВСТАВКА ТАБУЛАТУРЫ -----
-
 
 
 
