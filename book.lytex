@@ -319,8 +319,8 @@ $\largestar$
 \begin{center}
 
 \gtab{A}{X02220}
-\gtab{Bb}{6:133211}
-\gtab{B}{X24442}
+\gtab{B}{X13331}
+\gtab{H}{2:X13331}
 \gtab{C}{X32010}
 \gtab{Db}{9:133211}
 \gtab{D}{XX0232}
@@ -335,8 +335,8 @@ $\largestar$
 \bigskip
 
 \gtab{Am}{X02210}
-\gtab{Bbm}{6:133111}
-\gtab{Bm}{X24432}
+\gtab{Bm}{X13321}
+\gtab{Hm}{2:X13321}
 \gtab{Cm}{3:X13321}
 \gtab{Dbm}{9:133111}
 \gtab{Dm}{XX0231}
@@ -351,8 +351,8 @@ $\largestar$
 \bigskip
 
 \gtab{Asus}{X02230}
-\gtab{Bbsus}{6:133311}
-\gtab{Bsus}{X24400}
+\gtab{Bsus}{6:133311}
+\gtab{Hsus}{X244000}
 \gtab{Csus}{X33011}
 \gtab{Dbsus}{9:113311}
 \gtab{Dsus}{XX0233}
@@ -367,8 +367,8 @@ $\largestar$
 \bigskip
 
 \gtab{Asus2}{X02200}
-\gtab{Bbsus2}{X13311}
-\gtab{Bsus2}{X24422}
+\gtab{Bsus2}{X13311}
+\gtab{Hsus2}{2:X13311}
 \gtab{Csus2}{X30013}
 \gtab{Dbsus2}{4:X13311}
 \gtab{Dsus2}{XX0230}
@@ -392,8 +392,8 @@ $\largestar$
 \begin{center}
 
 \gtab{A7}{X02020}
-\gtab{Bb7}{X13131}
-\gtab{B7}{X21202}
+\gtab{B7}{X13131}
+\gtab{H7}{X21202}
 \gtab{C7}{032310}
 \gtab{Db7}{4:X13131}
 \gtab{D7}{XX0212}
@@ -407,69 +407,6 @@ $\largestar$
 \bigskip
 \bigskip
 
-\gtab{Am7}{X02213}
-\gtab{Bbm7}{X13121}
-\gtab{Bm7}{020202}
-\gtab{Cm7}{3:X13121}
-\gtab{Dbm7}{4:X13121}
-\gtab{Dm7}{XX0211}
-
-\gtab{Ebm7}{6:X13121}
-\gtab{Em7}{022030}
-\gtab{Fm7}{131111}
-\gtab{F#m7}{2:131111}
-\gtab{Gm7}{3:131111}
-\gtab{G#m7}{4:131141}
-\bigskip
-\bigskip
-
-\gtab{Amaj7}{X02120}
-\gtab{Bbmaj7}{X13231}
-\gtab{Bmaj7}{X24342}
-\gtab{Cmaj7}{X32000}
-\gtab{Dbmaj7}{4:X13231}
-\gtab{Dmaj7}{XX0222}
-
-\gtab{Ebmaj7}{6:X13231}
-\gtab{Emaj7}{021100}
-\gtab{Fmaj7}{XX3210}
-\gtab{F#maj7}{XX4321}
-\gtab{Gmaj7}{320002}
-\gtab{G#maj7}{XX1113}
-\bigskip
-\bigskip
-
-%\gtab{Am7+}{X02110}
-%\gtab{Bbm7+}{6:132111}
-%\gtab{Bm7+}{X24332}
-%\gtab{Cm7+}{3:X13221}
-%\gtab{Dbm7+}{4:X13221}
-%\gtab{Dm7+}{XX0221}
-
-%\gtab{Ebm7+}{6:X13221}
-%\gtab{Em7+}{021000}
-%\gtab{Fm7+}{132111}
-%\gtab{F#m7+}{2:132111}
-%\gtab{Gm7+}{3:132111}
-%\gtab{G#m7+}{4:132111}
-%\bigskip
-%\bigskip
-
-\gtab{A7sus4}{X02030}
-\gtab{Bb7sus4}{6:131311}
-\gtab{B7sus4}{X22202}
-\gtab{C7sus4}{3:X13141}
-\gtab{Db7sus4}{9:131311}
-\gtab{D7sus4}{XX0213}
-
-\gtab{Eb7sus4}{6:X13141}
-\gtab{E7sus4}{020200}
-\gtab{F7sus4}{131311}
-\gtab{F#7sus4}{2:131311}
-\gtab{G7sus4}{3:131311}
-\gtab{G#7sus4}{4:131311}
-\bigskip
-\bigskip
 
 \end{center}	
 \vspace*{\fill}
