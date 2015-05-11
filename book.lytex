@@ -7,76 +7,101 @@
 \usepackage[bookmarks]{hyperref}
 \usepackage[chorded]{songs}
 
+% additional packages
+\usepackage{MnSymbol} % for arrow symbols
+\usepackage{marvosym} % for male/female symbols
+\usepackage{tikz}     % for painting ditto sign
 
-% РАСПОЛОЖЕНИЕ
 
-% отступ в 1 inch (2.54cm) по ширине и высоте по умолчанию
+
+% ---------------- SETTINGS ----------------
+
+
+% 1. РАЗМЕТКА СТРАНИЦЫ
+
+% отступ в 1 inch по ширине и высоте по умолчанию
 \setlength{\oddsidemargin}{-0.35in} % - влево + вправо (default 0in)
-\setlength{\evensidemargin}{0in} % хз
-\setlength{\textwidth}{6.97in} %  - уже + шире (в два раза меньше по сравнению с oddsidemargin!)(default 6.5in)
-\setlength{\topmargin}{-0.3in} % - выше + ниже (default 0in)
-\setlength{\topskip}{0.0in} % (default 0in)
-\setlength{\headheight}{0in} % (default 0in)
-\setlength{\headsep}{0in} % (default 0in)
-\setlength{\textheight}{10.23in} % - ниже + длиннее (default 9.1in)
-\settowidth{\versenumwidth}{1.\ } % (default 1.\)
+\setlength{\evensidemargin}{0in}    % хз
+\setlength{\textwidth}{6.97in}      % - уже  + шире (в 2р меньше по сравнению с oddsidemargin!)(default 6.5in)
+\setlength{\topmargin}{-0.3in}      % - выше + ниже (default 0in)
+\setlength{\topskip}{0.0in}         % (default 0in)
+\setlength{\headheight}{0in}        % (default 0in)
+\setlength{\headsep}{0in}           % (default 0in)
+\setlength{\textheight}{10.23in}    % - ниже + длиннее (default 9.1in)
+\settowidth{\versenumwidth}{1.\ }   % (default 1.\)
 
 
-% РАЗМЕР ТЕКСТА
 
-% куплеты, припевы
-\renewcommand{\lyricfont}{%
+% 2. СТИЛЬ И РАЗМЕР ТЕКСТА
+
+% А) название песни
+\renewcommand{\stitlefont}{
+  \sffamily\slshape\LARGE
+}
+
+% Б) автор (в файле songs.sty!)
+	% \newcommand\showauthors{%
+
+% В) отряд (в файле songs.sty!)
+	% \newcommand\showrefs{%
+
+% Г) куплеты, припевы
+\renewcommand{\lyricfont}{
   \fontsize{11pt}{11pt}
   \selectfont
 }
 
+% Д) комментарии
+\newenvironment{comm}{\sffamily\it}{\par}
+% USAGE: {\comm <text>}
 
+% Е) пометки в конце песни (в файле songs.sty!)
+	% \renewcommand\makepostlude{%
 
-% название песни
-\renewcommand{\stitlefont}{
-  %\fontfamily{sf} 
-  %\fontseries{sf} % sans-serif
-  %\fontshape{sl} % наклонный
-  %\fontsize{14pt}{14pt}
-  %\selectfont
-  \sffamily\slshape\LARGE
-}
-
-
-
-
-% вкючена нумерация страниц
-%\pagestyle{plain}
-%\pagestyle{empty}
-\sepindexesfalse
-
-% многоточие в слове считается сиволом для аккордов
-\DeclareLyricChar{\dots}
-
-% аккорды генерируют пробелы, если не вмещаются под словом
-\MultiwordChords
-
-% для описания в конце песни (изменяем стиль)
+% Ж) описание в конце песни 
 \renewcommand{\scripturefont}{\sffamily\it}
 
+% З)
+\renewcommand{\idxheadfont}{\sffamily\bfseries\tiny}
 
 
-% знак повтора
-\usepackage{tikz}
+% И) оглавление
+\renewcommand{\idxtitlefont}{\sffamily\slshape}
+
+
+% NOTE! Как изменять стиль в файле songs.sty ?  
+% USAGE: place \<your own settings>
+
+
+
+% 3. ВЕРТИКАЛЬНЫЕ ОТСТУПЫ
+
+\newcommand{\bbk}{\vspace{30pt}}  % между блоками в содержании
+\newcommand{\ptk}{\vspace{6pt}}   % перед слд. боем или перебором
+\newcommand{\pchk}{\vspace{9pt}}  % перед аккордами
+\newcommand{\psk}{\vspace{15pt}}  % перед началом песни
+\newcommand{\plik}{\vspace{7pt}}  % перед табулатурой lilypond
+\newcommand{\bqk}{\vspace{11pt}}  % между четверостишьями
+
+
+
+% 4. ИСПОЛЬЗУЕМЫЕ СИМВОЛЫ
+
+% знак того же самого
 \newcommand{\dittotikz}{%
     \tikz{
         \draw [line width=0.12ex] (-0.2ex,0) -- +(0,0.8ex)
             (0.2ex,0) -- +(0,0.8ex);
         \draw [line width=0.08ex] (-0.6ex,0.4ex) -- +(-1.5em,0)
             (0.6ex,0.4ex) -- +(1.5em,0);
-    }%
+    }
 }
 
-% стиль для стрелочек
-\usepackage{MnSymbol}
-\usepackage{marvosym} % for male female symbols
+% знак повтора
+\newcommand*{\dittoci}{\lcirclearrowleft} 
 
-% упрощаем стрелочки, пробелы
+
+% стрелочки, пообелы, оступы для гитарного боя
 \newcommand*{\up}{\uparrow} 
 \newcommand*{\upx}{\upmapsto}           % приглушка вверх
 \newcommand*{\ups}{\dasheduparrow}      % незвучащая вверх
@@ -85,21 +110,62 @@
 \newcommand*{\downs}{\dasheddownarrow}  % незвучащая вниз
 \newcommand*{\q}{\quad}
 
-% вертикальные отступы
-\newcommand{\ptk}{\vspace{6pt}}   % pre touch skip (перед слд. боем или перебором)
-\newcommand{\pchk}{\vspace{9pt}}  % pre chord skip (перед аккордами)
-\newcommand{\psk}{\vspace{15pt}}  % pre song skip (перед началом песни)
-\newcommand{\plik}{\vspace{7pt}}  % pre lilypond skip (перед табулатурой lilypond)
-\newcommand{\bqk}{\vspace{11pt}}  % between quatrain skip (оступ между четверостишьями)
+
+% звезда для названия отряда
+\newcommand*{\oStar}{\largestar} 
 
 
-% горизонтальный отступ 
-%  TODO (у табулатуры - напротив аккорда)
+% звезда вместо символа - цензура
+\newcommand*{\hStar}{\filledstar} 
+
+
+% male/female символы
+	% \Male
+	% \Female
+	% \FemaleMale
+
+
+
+
+% 5. ДОП. НАСТРОЙКИ
+
+% оглавнение в два столбца
+\sepindexesfalse 
+
+% многоточие в слове считается сиволом для аккордов
+\DeclareLyricChar{\dots}
+
+% аккорды НЕ генерируют пробелы, если не вмещаются под словом
+\MultiwordChords 
+
+
+
+
+
+
+% вкючена нумерация страниц
+%\pagestyle{plain}
+%\pagestyle{empty}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 % количество аккордов перед переходом на слд. строку
 % a) две колонки - 5
 % б) одна колонка - 12
+
+
 
 
 % ---------------- ГЛАВЫ ПЕСЕННИКА ----------------
@@ -129,7 +195,7 @@
 
 
 
-   \renewcommand{\idxauthfont}{\small\it}
+   
 
 \usepackage{float}
 \usepackage{etoolbox}
@@ -143,28 +209,25 @@
 \usepackage{graphics}
 \begin{document}
  
-
+%\vspace*{\fill}
 \indexsongsas{titleidx1}{\thepage}
 \showindex{Отрядные}{titleidx1}
+\bbk
 
-\bigskip
-\bigskip
 
 \indexsongsas{titleidx2}{\thepage}
 \showindex{Сачок}{titleidx2}
+\bbk
 
-\bigskip
-\bigskip
 
 \indexsongsas{titleidx3}{\thepage}
 \showindex{Лагерные}{titleidx3}
+\bbk
 
-\bigskip
-\bigskip
 
 \indexsongsas{titleidx4}{\thepage}
 \showindex{Всеми любимые}{titleidx4}
-
+%\vspace*{\fill}
 \newpage
 
 
@@ -239,6 +302,9 @@ $\largestar$
 \endscripture
 
 \songcolumns{2}
+
+
+
 
 
 
