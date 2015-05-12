@@ -125,6 +125,14 @@
 	% \FemaleMale
 
 
+% в переборе, когда несколько струн одновременно извлекаются
+
+% 3 струны
+\newcommand*{\col}[3]{{\footnotesize \ensuremath{\begin{matrix}#1\\#2\\#3\end{matrix}}}}
+% USAGE: col{1}{2}{3}
+
+% 2 струны
+\newcommand*{\co}[2]{{\small \ensuremath{\begin{matrix}#1\\#2\end{matrix}}}}
 
 
 % 5. ДОП. НАСТРОЙКИ
@@ -297,6 +305,8 @@ $\largestar$
 \hspace{53pt} % для проигрыша
 \hspace{62pt} % для вступления
 \hspace{29.4pt} % для коды
+
+
 
 \beginscripture{}
 \endscripture
