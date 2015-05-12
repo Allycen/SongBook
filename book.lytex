@@ -68,6 +68,9 @@
 % И) оглавление
 \renewcommand{\idxtitlefont}{\sffamily\slshape}
 
+% К) текст содержания
+
+
 
 % NOTE! Как изменять стиль в файле songs.sty ?  
 % USAGE: place \<your own settings>
@@ -217,6 +220,8 @@
 \usepackage{graphics}
 \begin{document}
  
+
+\thispagestyle{empty}
 %\vspace*{\fill}
 \indexsongsas{titleidx1}{\thepage}
 \showindex{Отрядные}{titleidx1}
@@ -238,7 +243,7 @@
 %\vspace*{\fill}
 \newpage
 
-
+\thispagestyle{empty}
 \songsection{Отрядные}
 \newpage
 \begin{songs}{titleidx1,authidx1,scripidx1}
@@ -246,7 +251,7 @@
 \input{OTRYAD_SONGS.txt}
 \end{songs}
 
-
+\thispagestyle{empty}
 \songsection{Сачок}
 \newpage
 \begin{songs}{titleidx2,authidx2,scripidx2}
@@ -254,7 +259,7 @@
 \input{SOCKO_SONGS.txt}
 \end{songs}
 
-
+\thispagestyle{empty}
 \songsection{Лагерные}
 \newpage
 \begin{songs}{titleidx3,authidx3,scripidx3}
@@ -262,7 +267,7 @@
 \input{CAMP_SONGS.txt}
 \end{songs}
 
-
+\thispagestyle{empty}
 \songsection{Всеми любимые}
 \newpage
 \begin{songs}{titleidx4,authidx4,scripidx4}
@@ -270,12 +275,14 @@
 \input{LOVE_SONGS.txt}
 \end{songs}
 
+\newpage
 
 
 
 % ----- ОСНОВНЫЕ БОИ ------ 
 
 {\nolyrics Бой: $\down\q   \down \up\q   \up \down \up $} %6-ка
+{\nolyrics Бой: $\down\q   \downx \up\q   \up \downx \up $}
 
 {\nolyrics Бой: $\down\q   \down\q   \up\ \up \down\q   \down \up \down \up$} % Гореть (Люмен)
 
