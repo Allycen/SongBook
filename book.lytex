@@ -68,8 +68,8 @@
 % И) оглавление
 \renewcommand{\idxtitlefont}{\sffamily\slshape}
 
-% К) текст содержания
-
+% К) слово "Содержание"
+\newenvironment{content}{\sffamily\it\LARGE}{\par}
 
 
 % NOTE! Как изменять стиль в файле songs.sty ?  
@@ -79,6 +79,7 @@
 
 % 3. ВЕРТИКАЛЬНЫЕ ОТСТУПЫ
 
+\newcommand{\bhk}{\vspace{30pt}}  % между словом "Содержание" и блоком
 \newcommand{\bbk}{\vspace{30pt}}  % между блоками в содержании
 \newcommand{\ptk}{\vspace{6pt}}   % перед слд. боем или перебором
 \newcommand{\pchk}{\vspace{9pt}}  % перед аккордами
@@ -223,6 +224,12 @@
 
 \thispagestyle{empty}
 %\vspace*{\fill}
+
+\begin{center}
+{\content Содержание}
+\end{center}
+\bhk
+
 \indexsongsas{titleidx1}{\thepage}
 \showindex{Отрядные}{titleidx1}
 \bbk
@@ -309,7 +316,7 @@ $\largestar$
 {\nolyrics Вступление: }
 {\nolyrics Проигрыш: }
 
-\hspace{53pt} % для проигрыша
+\hspace{57.7pt} % для проигрыша
 \hspace{62pt} % для вступления
 \hspace{29.4pt} % для коды
 
