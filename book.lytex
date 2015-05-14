@@ -1,5 +1,5 @@
 
-\documentclass[a4paper]{article}
+\documentclass[a4paper,twoside]{article}
 \usepackage{eso-pic,graphicx}
 
 \usepackage[T2A]{fontenc}
@@ -18,17 +18,37 @@
 
 
 % 1. РАЗМЕТКА СТРАНИЦЫ
+% вынос для пружинки - 5мм
+% лист a4 - 210x297мм
 
-% отступ в 1 inch по ширине и высоте по умолчанию
-\setlength{\oddsidemargin}{-0.35in} % - влево + вправо (default 0in)
-\setlength{\evensidemargin}{0in}    % хз
-\setlength{\textwidth}{6.97in}      % - уже  + шире (в 2р меньше по сравнению с oddsidemargin!)(default 6.5in)
-\setlength{\topmargin}{-0.3in}      % - выше + ниже (default 0in)
-\setlength{\topskip}{0.0in}         % (default 0in)
-\setlength{\headheight}{0in}        % (default 0in)
-\setlength{\headsep}{0in}           % (default 0in)
-\setlength{\textheight}{10.23in}    % - ниже + длиннее (default 9.1in)
-\settowidth{\versenumwidth}{1.\ }   % (default 1.\)
+\addtolength{\hoffset}{-1in}
+\addtolength{\voffset}{-1in}
+
+
+% отступ слева на нечётных страницах
+\setlength{\oddsidemargin}{2.0cm}
+
+% отступ слева чётных страница
+\setlength{\evensidemargin}{1.5cm}  
+
+% ширина текста
+\setlength{\textwidth}{17.5cm}
+
+% отступ сверху
+\setlength{\topmargin}{2.0cm}
+
+% высота текста
+\setlength{\textheight}{25.7cm}
+
+% расстояние от текста до номера страницы
+\setlength{\footskip}{30pt}
+
+% доп. настройки рзметки
+\setlength{\topskip}{0.0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\settowidth{\versenumwidth}{1.\ }
+
 
 
 
@@ -155,8 +175,9 @@
 \MultiwordChords 
 
 
+ % переносы в русских словах
 
-
+\righthyphenmin=2
 
 
 % вкючена нумерация страниц
@@ -224,7 +245,6 @@
 \newcommand*{\EXPLAINED}{}%
 \usepackage{graphics}
 \begin{document}
- 
 
 \thispagestyle{empty}
 %\vspace*{\fill}
