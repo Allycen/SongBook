@@ -21,21 +21,18 @@
 % вынос для пружинки - 5мм
 % лист a4 - 210x297мм
 
-\addtolength{\hoffset}{-1in}
-\addtolength{\voffset}{-1in}
 
+% отступ слева на нечётных страницах (делаем -2.54cm от рассчитываемого отступа с левого края)
+\setlength{\oddsidemargin}{-0.46cm} % 2cm
 
-% отступ слева на нечётных страницах
-\setlength{\oddsidemargin}{2.0cm}
-
-% отступ слева чётных страница
-\setlength{\evensidemargin}{1.5cm}  
+% отступ слева чётных страница (-//-)
+\setlength{\evensidemargin}{-1.04cm}  % 1.5cm
 
 % ширина текста
 \setlength{\textwidth}{17.5cm}
 
-% отступ сверху
-\setlength{\topmargin}{2.0cm}
+% отступ сверху (делаем -2.54cm от рассчитываемого отступа с верхнего края)
+\setlength{\topmargin}{-0.46cm} % 2 cm
 
 % высота текста
 \setlength{\textheight}{25.7cm}
@@ -160,7 +157,7 @@
 
 % 2 струны
 \newcommand*{\co}[2]{{\small \ensuremath{\begin{matrix}#1\\#2\end{matrix}}}}
-
+% USAGE: co{1}{2}
 
 
 % 5. ДОП. НАСТРОЙКИ
@@ -187,15 +184,25 @@
 
 
 
+% 6. background
+
+\usepackage{wallpaper}
 
 
 
 
 
 
+\usepackage{float}
+\usepackage{etoolbox}
+\ifdef{\thechapter}{\newfloat{foo}{htb}{bar}[chapter]}{}
+\makeatletter
+\patchcmd{\Ginclude@eps}{"#1"}{#1}{}{}
+\makeatother
 
 
-
+\newcommand*{\EXPLAINED}{}%
+\usepackage{graphics}
 
 
 % количество аккордов перед переходом на слд. строку
@@ -232,23 +239,16 @@
 
 
 
-   
 
-\usepackage{float}
-\usepackage{etoolbox}
-\ifdef{\thechapter}{\newfloat{foo}{htb}{bar}[chapter]}{}
-\makeatletter
-\patchcmd{\Ginclude@eps}{"#1"}{#1}{}{}
-\makeatother
+% ---------------- НАЧАЛО ДОКУМЕНТА ----------------
 
-
-\newcommand*{\EXPLAINED}{}%
-\usepackage{graphics}
 \begin{document}
 
-\thispagestyle{empty}
-%\vspace*{\fill}
 
+
+% ------------- СОДЕРЖАНИЕ -------------
+
+\thispagestyle{empty}
 \begin{center}
 {\content Содержание}
 \end{center}
@@ -271,9 +271,17 @@
 
 \indexsongsas{titleidx4}{\thepage}
 \showindex{Всеми любимые}{titleidx4}
-%\vspace*{\fill}
 \newpage
 
+
+% ------------- ПУСТАЯ СТРАНИЦА -------------
+%\thispagestyle{empty}
+%\newpage
+
+
+% ------------- ПЕСНИ -------------
+
+\ThisCenterWallPaper{1.0}{img/theme1.png}
 \thispagestyle{empty}
 \songsection{Отрядные}
 \newpage
