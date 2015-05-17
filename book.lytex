@@ -8,11 +8,11 @@
 \usepackage[chorded]{songs}
 
 % additional packages
-\usepackage{MnSymbol} % for arrow symbols
-\usepackage{marvosym} % for male/female symbols
-\usepackage{tikz}     % for painting ditto sign
-
-
+\usepackage{MnSymbol} % arrow symbols
+\usepackage{marvosym} % male/female symbols
+\usepackage{tikz}     % painting ditto sign
+\usepackage{wallpaper} % background 
+\usepackage{afterpage} % inserting blank pages
 
 % ---------------- SETTINGS ----------------
 
@@ -171,43 +171,14 @@
 % аккорды НЕ генерируют пробелы, если не вмещаются под словом
 \MultiwordChords 
 
-
- % переносы в русских словах
-
-\righthyphenmin=2
-
-
-% вкючена нумерация страниц
-%\pagestyle{plain}
-%\pagestyle{empty}
+% возможность вставки пустых страниц
+\newcommand\blankpage{
+    \null
+    \thispagestyle{empty}
+    %\addtocounter{page}{-1}
+    \newpage}
 
 
-
-
-% 6. background
-
-\usepackage{wallpaper}
-
-
-
-
-
-
-\usepackage{float}
-\usepackage{etoolbox}
-\ifdef{\thechapter}{\newfloat{foo}{htb}{bar}[chapter]}{}
-\makeatletter
-\patchcmd{\Ginclude@eps}{"#1"}{#1}{}{}
-\makeatother
-
-
-\newcommand*{\EXPLAINED}{}%
-\usepackage{graphics}
-
-
-% количество аккордов перед переходом на слд. строку
-% a) две колонки - 5
-% б) одна колонка - 12
 
 
 
@@ -240,7 +211,13 @@
 
 
 
+
+
 % ---------------- НАЧАЛО ДОКУМЕНТА ----------------
+
+% количество аккордов перед переходом на слд. строку
+% a) две колонки - 5
+% б) одна колонка - 12
 
 \begin{document}
 
@@ -258,26 +235,21 @@
 \showindex{Отрядные}{titleidx1}
 \bbk
 
-
 \indexsongsas{titleidx2}{\thepage}
 \showindex{Сачок}{titleidx2}
 \bbk
-
 
 \indexsongsas{titleidx3}{\thepage}
 \showindex{Лагерные}{titleidx3}
 \bbk
 
-
 \indexsongsas{titleidx4}{\thepage}
 \showindex{Всеми любимые}{titleidx4}
 \newpage
-
+\addtocounter{page}{-1}
 
 % ------------- ПУСТАЯ СТРАНИЦА -------------
-%\thispagestyle{empty}
-%\newpage
-
+\blankpage
 
 % ------------- ПЕСНИ -------------
 
@@ -289,7 +261,9 @@
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{OTRYAD_SONGS.txt}
 \end{songs}
+\blankpage
 
+\ThisCenterWallPaper{1.0}{img/theme2.png}
 \thispagestyle{empty}
 \songsection{Сачок}
 \newpage
@@ -297,7 +271,9 @@
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{SOCKO_SONGS.txt}
 \end{songs}
+\blankpage
 
+\ThisCenterWallPaper{1.0}{img/theme3.png}
 \thispagestyle{empty}
 \songsection{Лагерные}
 \newpage
@@ -305,178 +281,18 @@
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{CAMP_SONGS.txt}
 \end{songs}
+\blankpage
 
+\ThisCenterWallPaper{1.0}{img/theme4.png}
 \thispagestyle{empty}
 \songsection{Всеми любимые}
-\newpage
+%\newpage
 \begin{songs}{titleidx4,authidx4,scripidx4}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{LOVE_SONGS.txt}
 \end{songs}
 
-\newpage
-
-
-
-% ----- ОСНОВНЫЕ БОИ ------ 
-
-{\nolyrics Бой: $\down\q   \down \up\q   \up \down \up $} %6-ка
-{\nolyrics Бой: $\down\q   \downx \up\q   \up \downx \up $}
-
-{\nolyrics Бой: $\down\q   \down\q   \up\ \up \down\q   \down \up \down \up$} % Гореть (Люмен)
-
-{\nolyrics Бой: $\down\q   \down \up\q   \down\q   \down \up\q   \down\ \down$} % Гори (Дети курят)
-
-{\nolyrics Бой: $\down \down\ \down\q   \down \up \down \down\ \down$} % Линии (4ре апреля)
-
-{\nolyrics Бой: $\down\q   \down \up \down \up$} % Метель (ДДТ)
-
-
-
-
-% ----- ОСНОВНЫЕ ПЕРЕБОРЫ ------ 
-{\nolyrics Перебор: 5---2---1---2} % Капитал (Ляпис Трубецкой)
-
-{\nolyrics Перебор: 4---2---1---2-3} % Метель (ДДТ)
-
-{\nolyrics Перебор: 5---[4 3 2] \, 4---[4 3 2]} % Разговор со счастьем (к/ф "Иван Вас..")
-
-$\largestar$
-{\nolyrics Бой: $\downs\q   \downx \up\q   \ups \down \up $}
-
-% ----- ВСТАВКА ДОП. ИНФЫ -----
-{\nolyrics Вступление: }
-{\nolyrics Проигрыш: }
-
-\hspace{57.65pt} % для проигрыша
-\hspace{62pt} % для вступления
-\hspace{29.4pt} % для коды
-
-
-
-\beginscripture{}
-\endscripture
-
-\songcolumns{2}
-
-
-
-
-
-
-% ----- ВСТАВКА ТАБУЛАТУРЫ -----
-
-
-
-
-% ----- ТАБЛИЦА ОСНОВНЫХ АККОРДОВ -----
-
-\vspace*{\fill}
-\begin{center}
-
-\gtab{A}{X02220}
-\gtab{B}{X13331}
-\gtab{H}{2:X13331}
-\gtab{C}{X32010}
-\gtab{Db}{9:133211}
-\gtab{D}{XX0232}
-
-\gtab{Eb}{XX1343}
-\gtab{E}{022100}
-\gtab{F}{133211}
-\gtab{F#}{2:133211}
-\gtab{G}{320003}
-\gtab{G#}{4:133211}
-\bigskip
-\bigskip
-
-\gtab{Am}{X02210}
-\gtab{Bm}{X13321}
-\gtab{Hm}{2:X13321}
-\gtab{Cm}{3:X13321}
-\gtab{Dbm}{9:133111}
-\gtab{Dm}{XX0231}
-
-\gtab{Ebm}{6:X13321}
-\gtab{Em}{022000}
-\gtab{Fm}{133111}
-\gtab{F#m}{2:133111}
-\gtab{Gm}{3:133111}
-\gtab{G#m}{4:133111}
-\bigskip
-\bigskip
-
-\gtab{Asus}{X02230}
-\gtab{Bsus}{6:133311}
-\gtab{Hsus}{X244000}
-\gtab{Csus}{X33011}
-\gtab{Dbsus}{9:113311}
-\gtab{Dsus}{XX0233}
-
-\gtab{Esus}{022200}
-\gtab{Ebsus}{8:XX1124}
-\gtab{Fsus}{133311}
-\gtab{F#sus}{2:133311}
-\gtab{Gsus}{3:133311}
-\gtab{G#sus}{4:133311}
-\bigskip
-\bigskip
-
-\gtab{Asus2}{X02200}
-\gtab{Bsus2}{X13311}
-\gtab{Hsus2}{2:X13311}
-\gtab{Csus2}{X30013}
-\gtab{Dbsus2}{4:X13311}
-\gtab{Dsus2}{XX0230}
-
-\gtab{Ebsus2}{6:X13311}
-\gtab{Esus2}{2:XX1341}
-\gtab{Fsus2}{XX3011}
-\gtab{F#sus2}{9:X13311}
-\gtab{Gsus2}{300233}
-\gtab{G#sus2}{6:XX1341}
-\bigskip
-\bigskip
-
-\end{center}
-\vspace*{\fill}
-
-\newpage
-
-
-\vspace*{\fill}
-\begin{center}
-
-\gtab{A7}{X02020}
-\gtab{B7}{X13131}
-\gtab{H7}{X21202}
-\gtab{C7}{032310}
-\gtab{Db7}{4:X13131}
-\gtab{D7}{XX0212}
-
-\gtab{Eb7}{6:X13131}
-\gtab{E7}{020100}
-\gtab{F7}{131211}
-\gtab{F#7}{2:131211}
-\gtab{G7}{320001}
-\gtab{G#7}{4:131211}
-\bigskip
-\bigskip
-
-
-\end{center}	
-\vspace*{\fill}
-
-\newpage
-
-\begin{figure}[hhh!]
-\begin{center}
-\includegraphics[width=12cm]{img/noti.png}
-\end{center}
-\end{figure}
-
-
-
+\blankpage
 
 
 \end{document}
