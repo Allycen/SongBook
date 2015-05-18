@@ -16,6 +16,8 @@
 \usepackage{savesym}
 %\savesymbol{Cross}
 \usepackage{marvosym} % hand symbol
+\usepackage{wasysym} % music note symbols
+\usepackage{dsfont} % for T as text author
 
 % ---------------- SETTINGS ----------------
 
@@ -190,6 +192,13 @@
 \newcommand*{\co}[2]{{\small \ensuremath{\begin{matrix}#1\\#2\end{matrix}}}}
 % USAGE: co{1}{2}
 
+% музыка 
+%\newcommand*{\musik}{Музыка: } 
+\newcommand*{\musik}{\twonotes\ } 
+
+% автор
+\newcommand*{\authorr}{$\mathds{T}$\ } 
+
 
 % 5. ДОП. НАСТРОЙКИ
 
@@ -209,6 +218,28 @@
     %\addtocounter{page}{-1}
     \newpage}
 
+
+% описание к песни
+
+% автор
+\newcommand{\autho}{}
+\newsongkey{txt}{\def\autho{}}
+                {\def\autho{\authorr #1\par}}
+
+\renewcommand{\extendprelude}{
+  \showrefs\showauthors
+  {\sl\mdseries\scriptsize\autho}
+}
+
+% музыка
+\newcommand{\musc}{}
+\newsongkey{musc}{\def\musc{}}
+                {\def\musc{\musik #1\par}}
+
+\renewcommand{\extendprelude}{
+  \showrefs\showauthors\sl\mdseries\scriptsize\autho
+  {\sl\mdseries\scriptsize\musc}
+}
 
 
 
@@ -288,7 +319,7 @@
 
 \ThisCenterWallPaper{1.0}{img/theme1.png}
 \thispagestyle{empty}
-\doff \hroff {\chptr Отрядные}
+\doff \hroff {\chptr Со$\oStar$}
 \newpage
 
 \begin{songs}{titleidx1,authidx1,scripidx1}
