@@ -13,6 +13,9 @@
 \usepackage{tikz}     % painting ditto sign
 \usepackage{wallpaper} % background 
 \usepackage{afterpage} % inserting blank pages
+\usepackage{savesym}
+%\savesymbol{Cross}
+\usepackage{marvosym} % hand symbol
 
 % ---------------- SETTINGS ----------------
 
@@ -51,42 +54,56 @@
 
 % 2. СТИЛЬ И РАЗМЕР ТЕКСТА
 
-% А) название песни
+% ----- СОДЕРЖАНИЕ -----
+
+% а) слово "Содержание"
+\newenvironment{content}{\sffamily\it\bfseries\Huge}{\par}
+
+% б) заглавные слова перед блоком (в файле songs.sty!)
+  % \newcommand\songsection ...
+
+% в) название песен
+\renewcommand{\idxtitlefont}{\sffamily\slshape}
+
+% г) нумерация
+\renewcommand{\idxrefsfont}{\normalfont\normalsize}
+
+
+
+% ----- ГЛАВА -----
+
+% название главы
+\newenvironment{chptr}{\sffamily\it\LARGE}{\par}
+
+
+% ----- ПЕСНЯ -----
+
+% а) название песни
 \renewcommand{\stitlefont}{
   \sffamily\slshape\LARGE
 }
 
-% Б) автор (в файле songs.sty!)
+% б) автор (в файле songs.sty!)
 	% \newcommand\showauthors{%
 
-% В) отряд (в файле songs.sty!)
+% в) отряд (в файле songs.sty!)
 	% \newcommand\showrefs{%
 
-% Г) куплеты, припевы
+% г) куплеты, припевы
 \renewcommand{\lyricfont}{
   \fontsize{11pt}{11pt}
   \selectfont
 }
 
-% Д) комментарии
+% д) комментарии
 \newenvironment{comm}{\sffamily\it}{\par}
 % USAGE: {\comm <text>}
 
-% Е) пометки в конце песни (в файле songs.sty!)
+% е) пометки в конце песни (в файле songs.sty!)
 	% \renewcommand\makepostlude{%
 
-% Ж) описание в конце песни 
+% ж) описание в конце песни 
 \renewcommand{\scripturefont}{\sffamily\it}
-
-% З)
-\renewcommand{\idxheadfont}{\sffamily\bfseries\tiny}
-
-
-% И) оглавление
-\renewcommand{\idxtitlefont}{\sffamily\slshape}
-
-% К) слово "Содержание"
-\newenvironment{content}{\sffamily\it\LARGE}{\par}
 
 
 % NOTE! Как изменять стиль в файле songs.sty ?  
@@ -94,15 +111,22 @@
 
 
 
-% 3. ВЕРТИКАЛЬНЫЕ ОТСТУПЫ
 
-\newcommand{\bhk}{\vspace{30pt}}  % между словом "Содержание" и блоком
-\newcommand{\bbk}{\vspace{30pt}}  % между блоками в содержании
-\newcommand{\ptk}{\vspace{6pt}}   % перед слд. боем или перебором
-\newcommand{\pchk}{\vspace{9pt}}  % перед аккордами
-\newcommand{\psk}{\vspace{15pt}}  % перед началом песни
-\newcommand{\plik}{\vspace{7pt}}  % перед табулатурой lilypond
-\newcommand{\bqk}{\vspace{11pt}}  % между четверостишьями
+% 3. ОТСТУПЫ
+
+% a) ВЕРТИКАЛЬНЫЕ 
+\newcommand{\bhk}{\vspace{26pt}}      % между словом "Содержание" и блоком
+\newcommand{\bbk}{\vspace{30pt}}      % между блоками в содержании
+\newcommand{\ptk}{\vspace{6pt}}       % перед слд. боем или перебором
+\newcommand{\pchk}{\vspace{9pt}}      % перед аккордами
+\newcommand{\psk}{\vspace{15pt}}      % перед началом песни
+\newcommand{\plik}{\vspace{7pt}}      % перед табулатурой lilypond
+\newcommand{\bqk}{\vspace{11pt}}      % между четверостишьями
+\newcommand{\doff}{\vspace*{5.0cm}}   % отступ от верхнего края в оглавлениях
+
+% b) ГОРИЗОНТАЛЬНЫЕ
+\newcommand{\hloff}{\hspace{5cm}}     % отступ от левого края в оглавлениях №1
+\newcommand{\hroff}{\hspace{10cm}}    % отступ от левого края в оглавлениях №2
 
 
 
@@ -226,13 +250,15 @@
 % ------------- СОДЕРЖАНИЕ -------------
 
 \thispagestyle{empty}
+
+
 \begin{center}
 {\content Содержание}
 \end{center}
 \bhk
 
 \indexsongsas{titleidx1}{\thepage}
-\showindex{Отрядные}{titleidx1}
+\showindex{Со$\oStar$}{titleidx1}
 \bbk
 
 \indexsongsas{titleidx2}{\thepage}
@@ -255,43 +281,49 @@
 
 \ThisCenterWallPaper{1.0}{img/theme1.png}
 \thispagestyle{empty}
-\songsection{Отрядные}
+\doff \hroff {\chptr Отрядные}
 \newpage
+
 \begin{songs}{titleidx1,authidx1,scripidx1}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{OTRYAD_SONGS.txt}
 \end{songs}
 \blankpage
 
+
 \ThisCenterWallPaper{1.0}{img/theme2.png}
 \thispagestyle{empty}
-\songsection{Сачок}
+\doff \hroff {\chptr Сачок}
 \newpage
+
 \begin{songs}{titleidx2,authidx2,scripidx2}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{SOCKO_SONGS.txt}
 \end{songs}
 \blankpage
 
+
 \ThisCenterWallPaper{1.0}{img/theme3.png}
 \thispagestyle{empty}
-\songsection{Лагерные}
+\doff \hroff {\chptr Лагерные}
 \newpage
+
 \begin{songs}{titleidx3,authidx3,scripidx3}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{CAMP_SONGS.txt}
 \end{songs}
 \blankpage
 
+
 \ThisCenterWallPaper{1.0}{img/theme4.png}
 \thispagestyle{empty}
-\songsection{Всеми любимые}
+\doff \hroff {\chptr Всеми любимые}
 %\newpage
+
 \begin{songs}{titleidx4,authidx4,scripidx4}
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{LOVE_SONGS.txt}
 \end{songs}
-
 \blankpage
 
 
