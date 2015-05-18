@@ -163,6 +163,13 @@
 % звезда вместо символа - цензура
 \newcommand*{\hStar}{\filledstar} 
 
+% бой
+\newcommand*{\boi}{{\LARGE\Pointinghand} \,} 
+%\newcommand*{\boi}{Бой: } 
+
+% перебор
+\newcommand*{\pere}{{\LARGE\Pointinghand} \,} 
+%\newcommand*{\pere}{Перебор: } 
 
 % male/female символы
 	% \Male
