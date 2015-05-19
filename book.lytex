@@ -28,10 +28,10 @@
 
 
 % отступ слева на нечётных страницах (делаем -2.54cm от рассчитываемого отступа с левого края)
-\setlength{\oddsidemargin}{-0.46cm} % 2cm
+\setlength{\oddsidemargin}{-0.4365cm} % 2,1035 cm
 
 % отступ слева чётных страница (-//-)
-\setlength{\evensidemargin}{-1.04cm}  % 1.5cm
+\setlength{\evensidemargin}{-1.1435cm}  % 1,3965 cm
 
 % ширина текста
 \setlength{\textwidth}{17.5cm}
@@ -295,7 +295,7 @@
 \end{center}
 \bhk
 
-\indexsongsas{titleidx1}{\thepage}
+\indexsongsas{authidx1}{\thepage}
 \showindex{Со$\oStar$}{titleidx1}
 \bbk
 
@@ -356,7 +356,7 @@
 \ThisCenterWallPaper{1.0}{img/theme4.png}
 \thispagestyle{empty}
 \doff \hroff {\chptr Всеми любимые}
-%\newpage
+\newpage
 
 \begin{songs}{titleidx4,authidx4,scripidx4}
 \baselineadj=-8pt plus 1pt minus 0pt
