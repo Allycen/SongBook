@@ -37,7 +37,7 @@
 \setlength{\textwidth}{17.5cm}
 
 % отступ сверху (делаем -2.54cm от рассчитываемого отступа с верхнего края)
-\setlength{\topmargin}{-0.46cm} % 2 cm
+\setlength{\topmargin}{-0.4365cm} % 2,1035 cm
 
 % высота текста
 \setlength{\textheight}{25.7cm}
@@ -75,7 +75,7 @@
 % ----- ГЛАВА -----
 
 % название главы
-\newenvironment{chptr}{\sffamily\it\LARGE}{\par}
+\newenvironment{chptr}{\sffamily\it\Huge}{\par}
 
 
 % ----- ПЕСНЯ -----
@@ -127,7 +127,7 @@
 \newcommand{\doff}{\vspace*{5.0cm}}   % отступ от верхнего края в оглавлениях
 
 % b) ГОРИЗОНТАЛЬНЫЕ
-\newcommand{\hloff}{\hspace{5cm}}     % отступ от левого края в оглавлениях №1
+\newcommand{\hloff}{\hspace{9cm}}     % отступ от левого края в оглавлениях №1
 \newcommand{\hroff}{\hspace{10cm}}    % отступ от левого края в оглавлениях №2
 
 
@@ -310,7 +310,7 @@
 \indexsongsas{titleidx4}{\thepage}
 \showindex{Всеми любимые}{titleidx4}
 \newpage
-\addtocounter{page}{-1}
+%\addtocounter{page}{-1}
 
 % ------------- ПУСТАЯ СТРАНИЦА -------------
 \blankpage
@@ -350,12 +350,12 @@
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{CAMP_SONGS.txt}
 \end{songs}
-\blankpage
+%\blankpage
 
 
 \ThisCenterWallPaper{1.0}{img/theme4.png}
 \thispagestyle{empty}
-\doff \hroff {\chptr Всеми любимые}
+\doff \hloff {\chptr Всеми любимые}
 \newpage
 
 \begin{songs}{titleidx4,authidx4,scripidx4}
