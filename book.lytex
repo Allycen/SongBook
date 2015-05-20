@@ -18,6 +18,7 @@
 \usepackage{marvosym} % hand symbol
 \usepackage{wasysym} % music note symbols
 \usepackage{dsfont} % for T as text author
+\usepackage{ulem} % зачеркивание текста
 
 % ---------------- SETTINGS ----------------
 
@@ -56,6 +57,19 @@
 
 % 2. СТИЛЬ И РАЗМЕР ТЕКСТА
 
+% ----- ПОЗДРАВЛЕНИЕ -----
+
+% оглавление
+\newenvironment{gcongr}{\sffamily\it\LARGE}{\par}
+
+% текст
+\newenvironment{congr}{\sffamily\it\normalsize}{\par}
+
+% подпись
+\newenvironment{scongr}{\sffamily\it\normalsize}{\par}
+
+
+
 % ----- СОДЕРЖАНИЕ -----
 
 % а) слово "Содержание"
@@ -69,6 +83,7 @@
 
 % г) нумерация
 \renewcommand{\idxrefsfont}{\normalfont\normalsize}
+
 
 
 
@@ -117,14 +132,18 @@
 % 3. ОТСТУПЫ
 
 % a) ВЕРТИКАЛЬНЫЕ 
-\newcommand{\bhk}{\vspace{26pt}}      % между словом "Содержание" и блоком
-\newcommand{\bbk}{\vspace{30pt}}      % между блоками в содержании
+\newcommand{\bhk}{\vspace{15pt}}      % между словом "Содержание" и блоком
+\newcommand{\bbk}{\vspace{28pt}}      % между блоками в содержании
 \newcommand{\ptk}{\vspace{6pt}}       % перед слд. боем или перебором
 \newcommand{\pchk}{\vspace{9pt}}      % перед аккордами
 \newcommand{\psk}{\vspace{15pt}}      % перед началом песни
 \newcommand{\plik}{\vspace{7pt}}      % перед табулатурой lilypond
 \newcommand{\bqk}{\vspace{11pt}}      % между четверостишьями
 \newcommand{\doff}{\vspace*{5.0cm}}   % отступ от верхнего края в оглавлениях
+
+% поздравление
+\newcommand{\cgoff}{\vspace*{8pt}}   % отступ между оглавлением и текстом 
+\newcommand{\ctoff}{\vspace*{1pt}}   % отступ между текстом и подписью 
 
 % b) ГОРИЗОНТАЛЬНЫЕ
 \newcommand{\hloff}{\hspace{9cm}}     % отступ от левого края в оглавлениях №1
@@ -283,13 +302,45 @@
 
 \begin{document}
 
+% ---------------- ТИТУЛЬНИК ----------------
+\blankpage
+
+% ------------- ПОДАРОК -------------
+
+\thispagestyle{empty}
+\vspace*{\fill}
+
+\noindent\makebox[\textwidth][c]{%
+    \begin{minipage}{13cm}
+
+      \begin{center}
+      {\gcongr К юбилею}
+      \end{center}
+      \cgoff
+
+      {\congr \hspace{9pt} Дорогое Созвездие! Хочу поздравить каждого бойца нашего педагогического отряда с Днём Рождения: 14 мая 2015 года нам исполнилось 5 лет! К нашему празднику я подготовил подарок --- песенник Со$\oStar$. В него я включил как песни нашего сочинения, так и популярные песни, которые мы пели, поём и будем петь. 
+      \vspace{7pt}
+
+      \hspace{9pt} Спасибо всем, кто помогал мне в его написании: Тане Узор за историческую справку, Ксюше Пиу за иллюстрации к песеннику, Тане Стрелковой и Вике Писаревой за проверку орфографии, Диме Барабашу (на момент весны 2015 года --- кандидат) за нахождение информации по авторам текста и музыки к некоторым песням.
+      \vspace{7pt}
+
+      \hspace{9pt} Хочу, чтобы песенник стал отправной точкой, стимулом для того, чтобы научиться играть на гитаре, а для уже состоявшихся гитаристов --- толчком для дальнейшего развития. Ну и конечно же хочу, чтобы каждая звёздочка в отряде пела свои любимые песни, благо, текст теперь всегда будет под рукой.
+      }
+      \ctoff
+
+      \begin{flushright}
+      {\scongr Миша Пономарёв}
+      \end{flushright}
+
+    \end{minipage}}
+\vspace*{\fill}
+\newpage
 
 
 % ------------- СОДЕРЖАНИЕ -------------
 
+\addtocounter{page}{-2}
 \thispagestyle{empty}
-
-
 \begin{center}
 {\content Содержание}
 \end{center}
@@ -313,7 +364,10 @@
 %\addtocounter{page}{-1}
 
 % ------------- ПУСТАЯ СТРАНИЦА -------------
+
+\thispagestyle{empty}
 \blankpage
+
 
 % ------------- ПЕСНИ -------------
 
@@ -350,8 +404,8 @@
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{CAMP_SONGS.txt}
 \end{songs}
-%\blankpage
-
+\blankpage
+\blankpage
 
 \ThisCenterWallPaper{1.0}{img/theme4.png}
 \thispagestyle{empty}
@@ -364,6 +418,7 @@
 \end{songs}
 \blankpage
 
+\blankpage
 
 \end{document}
 
