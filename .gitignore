@@ -1,5 +1,28 @@
+
+# a) temp files on Mac OS
 .DS_Store
+
+
+# b) result pdf files
 book.pdf
 book-a5.pdf
-/songs/NOSORT/*
+
+
+# c) all text files
 /songs/*.txt
+
+
+# d) content except examples
+/songs/отрядные/*
+/songs/отрядные/!4_Туда.tex
+
+/songs/сачок/*
+/songs/сачок/!Мы\ пройдём\ сквозь\ земной\ простор.tex
+
+/songs/лагерные/*
+/songs/лагерные/!Алые\ паруса\ 2.tex
+
+
+/songs/всеми\ любимые/*
+/songs/всеми\ любимые/!Белая\ гвардия\ (Белая\ гвардия).tex
+
