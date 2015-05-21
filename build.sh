@@ -34,5 +34,5 @@ mv conv.pdf book-a5.pdf
 
 # clean
 shopt -s extglob
-rm -rf !(book.lytex|build.sh|songs|img|book.pdf|conv.sh|conv|book-a5.pdf|build-rapid.sh)
+rm -rf !(book.lytex|build.sh|songs|img|book.pdf|conv.sh|conv|book-a5.pdf|build-rapid.sh|dependencies)
 
