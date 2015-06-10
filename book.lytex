@@ -311,7 +311,7 @@
 \end{center}
 \bhk
 
-\indexsongsas{authidx1}{\thepage}
+\indexsongsas{titleidx1}{\thepage}
 \showindex{Со$\oStar$}{titleidx1}
 \bbk
 
@@ -369,8 +369,8 @@
 \baselineadj=-8pt plus 1pt minus 0pt
 \input{CAMP_SONGS.txt}
 \end{songs}
-\blankpage
-\blankpage
+%\blankpage
+%\blankpage
 
 \ThisCenterWallPaper{1.0}{img/theme4.png}
 \thispagestyle{empty}
@@ -382,7 +382,11 @@
 \input{LOVE_SONGS.txt}
 \end{songs}
 
-\blankpage
+\ThisCenterWallPaper{1.0}{img/notesEven.png}
+\thispagestyle{empty}
+\hspace{30cm} {\tiny -}
+\newpage
+
 
 \ThisCenterWallPaper{1.0}{img/theme5.png}
 \thispagestyle{empty}

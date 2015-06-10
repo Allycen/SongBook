@@ -1,0 +1,117 @@
+\beginsong{Лирическая}[
+  sr = {СПО <<Со$\oStar$>>},
+  txt = {Вика Завадская},
+  musc = {В.Завадская, Л.Волков, Т.Ложкин, Д.Барабаш, К.Есипова}]
+
+{\nolyrics Бой: $\down \down \down\ \down \down \down\ \down \down\q (\down\q   \downs \up\q   \ups \down \up) $} %6-ка
+\pchk
+
+\gtab{C}{X32010}
+\gtab{G}{320003}
+\gtab{Am}{X02210}
+\gtab{D}{XX0232}
+\gtab{A}{X02220}
+
+\gtab{Hm}{2:X13321}
+\psk
+
+
+\beginverse*
+{\nolyrics Вступление: }
+\endverse
+\plik
+
+
+\begin{lilypond}
+#(set-global-staff-size 16)
+#(set! paper-alist (cons '("my size" . (cons (* 3.2 in) (* 2 in))) paper-alist))
+
+\paper {
+  #(set-paper-size "my size")
+  indent = 0 
+}
+
+PartpZeroVoiceZero =  \relative e {
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 \repeat
+  volta 2 {
+    <e c>4 \4 \f \5 \f c'4 \2 \f r2 \f | % 2
+    \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count
+    = #6 \startStaff \key c \major \numericTimeSignature\time 4/4
+    <b, g>4 \5 \f \6 \f d'4 \2 \f r2 \f | % 3
+    \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count
+    = #6 \startStaff \key c \major \numericTimeSignature\time 4/4
+    <e, a,>4 \4 \f \5 \f c'4 \2 \f r2 \f | % 4
+    \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count
+    = #6 \startStaff \key c \major \numericTimeSignature\time 4/4
+    <e, a,>4 \4 \f \5 \f b'4 \2 \f r2 \f
+  }
+  | % 5
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 \repeat
+  volta 2 {
+    <e, c>4 \4 \f \5 \f g'4 \1 \f <b,, g>4 \5 \f \6 \f e'4 \2 \f | % 6
+    \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count
+    = #6 \startStaff \key c \major \numericTimeSignature\time 4/4 <d
+    a,>4 \2 \f \5 \f <b a,>4 \2 \f \5 \f <d a,>4 \2 \f \5 \f <b
+    a,>4 \2 \f \5 \f
+  }
+}
+
+
+   \new TabStaff {
+     
+   %\tabFullNotation
+    \PartpZeroVoiceZero
+   }
+
+\end{lilypond}
+
+\beginverse
+\[C] Внезапно отк\[G]рыли эту д\[Am]верь ---
+И вот мы с Со$\oStar$ теперь!
+Сколько дождливых, тусклых, серых дней
+Своей улыбкой согревали вы!
+\endverse
+
+
+\beginchorus
+Е-\[C]е-е-е-\[G]е-е-е-\[Am]е-е \rep 2
+\endchorus
+
+\beginverse*
+{\nolyrics Проигрыш: \[C G Am] \rep 2}
+\endverse
+
+\beginverse
+Ваши улыбки, хохот и тепло
+В моей душе живут давно
+Хоть груз учёбы на плечах лежит,
+Я мыслью с вами, Звёзды, всё равно!
+\bqk
+
+И сколько мы дней не встречались
+Исправно ведём календарь,
+Мы б в ваших объятьях остались,
+Наверное, с февраля по май.
+\endverse
+
+
+\beginverse
+\[D] Мы каждо\[A]му хотим ска\[Hm]зать:
+<<Ты клёвый, боец, мы любим тебя!>>
+Желаем страстно и мы такими стать,
+Детские сердца своим жаром зажигать!
+\bqk
+
+Мне Звёзды мои рассказали,
+Как справиться с сотней детей.
+О лагере мы замечтали,
+Нет мысли теперь нам милей!
+\endverse
+
+\endsong
+
+\beginscripture{}
+Песня написана на юбилей отряда в мае 2015 года Викой Завадской. Она была исполнина 19 мая кандидатами на творческом вечере в честь дня рождения Со$\oStar$.
+\endscripture

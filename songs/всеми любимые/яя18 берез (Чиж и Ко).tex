@@ -1,0 +1,95 @@
+\songcolumns{1}
+
+\beginsong{18 берёз}[
+  by={Чиж и Ко}]
+
+{\nolyrics \pere 5---3---$\down$---$\down $} 
+\pchk
+
+\gtab{Am}{X02210}
+\gtab{Am/C}{X32210}
+\gtab{Hm7-5}{023230}
+\gtab{E7}{020100}
+\gtab{Dm7}{XX0211}
+\gtab{G}{320003}
+\gtab{G7}{320001}
+\gtab{C}{X32010}
+\gtab{D}{XX0232}
+\gtab{C7}{032310}
+\gtab{E}{022100}
+\gtab{Dm}{XX0231}
+
+\gtab{Dm/C}{X30231}
+\gtab{Am/G}{302210}
+\gtab{F}{133211}
+\psk
+
+\beginverse*
+{\nolyrics Вступление: }
+\endverse
+\plik
+
+\begin{lilypond}
+#(set-global-staff-size 16)
+#(set! paper-alist (cons '("my size" . (cons (* 2.5 in) (* 2 in))) paper-alist))
+
+PartpZeroVoiceZero =  \relative e {
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 e8 -> \4
+  \mf a8 \3 \mf <c e>8 \2 \mf \1 \mf a8 \3 \mf e16 \glissando -> \4
+  \mf g16 -> \4 \mf a'8 \1 \mf dis,8 \2 \mf c8 \glissando \3 \mf | % 2
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 b8 -> \3
+  \mf a'8 \1 \mf d,8 \2 \mf b8 \3 \mf b8 -> \3 \mf a'8 \1 \mf d,8 \2
+  \mf b16 ~ \3 \mf b16 \3 \mf
+}
+
+   \new TabStaff {
+     
+    %\tabFullNotation
+    \PartpZeroVoiceZero
+   }
+
+\end{lilypond}
+
+
+
+\beginverse
+\[Am]Солнце вста\[Am/C]ёт, ста\[Hm7-5]новится теп\[E7]лее.
+Хочется жить вечно, да где--то прогадал.
+Вновь не угодил в обьятия Морфея,
+А главное, в твои обьятья не попал.
+\endverse
+
+\beginchorus
+И мне не с\[Am]пится, \[Dm7 G G7 C] не с\[Am]пится. \[D C C7 E] \rep 2
+\endchorus
+
+\beginverse
+Циферблат от дыма почти уже не виден.
+Липкий от пота, курю в потолок,
+Из динамика чуть слышно доносится Ванклиберн,
+А на стене всё тот же пацифистский значок.
+\endverse
+
+\beginverse
+\[Dm]Поезд, поезд, \[Dm/C]поезд, поезд, \[Hm7-5]поезд,
+Уве\[E]зи меня на \[Am]Невский. \[Am/G] К \[F]невесте.
+Знаю, знаю, знаю, я всё знаю. Ну и что?
+Нам надо быть вместе. Всегда.
+\endverse
+
+\beginverse
+За мо\[Am]им ок\[Am/C]ном восем\[Hm7-5]надцать бе\[E7]рёз,
+Я их сам считал, как считают ворон,
+Тех, что \[Am]северный \[Am/C]ветер ку\[Dm]да--то у\[G7]нёс,
+И пос\[C]ледний гон\[F]дон --- как пос\[Hm7-5]ледний пат\[E]рон.
+\endverse
+
+\beginchorus
+И мне б не спиться, не спиться. \rep 2
+\endchorus
+
+\endsong
+
+\songcolumns{2}

@@ -1,0 +1,128 @@
+\beginsong{Вахтёрам}[
+  by={Бумбокс}]
+
+{\nolyrics \boi $\down\q   \up \down \up \down\q   \up \down \up \down \up \down \up$}
+\pchk
+
+\gtab{Am}{X02210}
+\gtab{G}{320003}
+\gtab{Dm}{XX0231}
+\gtab{E7}{022130}
+\psk
+
+\beginverse*
+{\nolyrics Вступление: }
+\endverse
+\plik
+
+
+\begin{lilypond}
+#(set-global-staff-size 16)
+#(set! paper-alist (cons '("my size" . (cons (* 3.2 in) (* 3 in))) paper-alist))
+
+% если песня в ДВЕ колонки
+\paper {
+  #(set-paper-size "my size")
+  indent = 0
+}
+
+
+PartpZeroVoiceZero =  \relative b, {
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 b16
+  \glissando \5 \f c16 \5 \f d16 \glissando \4 \f e16 \4 \f a,8 \5 \f
+  e'8 \4 \f <c' a>8. \2 \f \3 \f <c a>16 \2 \f \3 \f r16 \mf <c a>16
+  \2 \f \3 \f a,8 \5 \f | % 2
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 b16
+  \glissando \5 \f c16 \glissando \5 \f b16 \5 \f a16 \5 \f g8 \6 \f
+  d'8 \4 \f <d' g,>8. \2 \f \3 \f <d g,>16 \2 \f \3 \f r16 \mf <d g,>16
+  \2 \f \3 \f a,8 \5 \f | % 3
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 b16
+  \glissando \5 \f c16 \5 \f d16 \glissando \4 \f e16 \4 \f d8 \4 \f
+  a'8 \3 \f <f' d>8 \1 \f \2 \f a,8 \3 \f c,8 \5 \f <f' d>8 \1 \f \2
+  \f | % 4
+  \clef "None" \stopStaff \override Staff.StaffSymbol #'line-count =
+  #6 \startStaff \key c \major \numericTimeSignature\time 4/4 e,16
+  \glissando \4 \f f16 \glissando \4 \f e16 \4 \f d16 \4 \f e,8 \6 \f
+  a8 \5 \f <d' gis, e b>8. \2 \f \3 \f \4 \f \5 \f <d gis, e b>16 \2
+  \f \3 \f \4 \f \5 \f r16 \mf <d gis, e b>16 \2 \f \3 \f \4 \f \5 \f
+  e,,8 \6 \f
+}
+
+   \new TabStaff {
+    %\tabFullNotation
+    \PartpZeroVoiceZero
+   }
+
+\end{lilypond}
+
+
+
+\beginverse
+Тебе не нравится \[Am]дым --- чёрт с ним,
+Он убивает сло\[G]ва --- кругом голова,
+Уже разносит мол\[Dm]ва по дворам,
+Что между нами <<Чи\[E7]вава>>.
+\bqk
+
+О чём с тобой говорить? Потеряли нить.
+Быть не собой перестать --- и дома спать,
+Нас не измерить на глаз, а сейчас
+Зачем мы давим на тормоз, не на газ?
+\bqk
+
+Вопрос извечный: зачем да почему,
+Я понемногу с ума, ты не сама.
+А эти ночи в Крыму теперь кому?
+И если встречу потом, передам ему.
+\bqk
+
+Писклявый твой голосок, как электрошок,
+Что я бухой без вина --- твоя вина,
+Теперь узнает страна до темна ---
+Им донесут обо всём на FM волнах.
+\endverse
+
+
+\beginchorus
+Я помню белые обои, чёрная посуда,
+Нас в хрущёвке двое, кто мы и откуда, откуда?
+Задвигаем шторы, кофеёк, плюшки стынут,
+Объясните теперь нам, вахтёры,
+Почему я на ней так сдвинут?
+\endchorus
+
+
+\beginverse*
+{\nolyrics Проигрыш: \[Am G Dm E7]}
+\endverse
+
+
+\beginverse
+Давай вот так просидим до утра,
+Не уходи, погоди --- мне пора.
+Ну если выход один впереди,
+То почему мы --- то холод, то жара?
+\bqk
+
+Раскладывать по местам я устал.
+И поворачивать вспять, ну вот опять.
+Прикосновения плавили мой металл,
+Ты элемент номер пять --- ни дать ни взять.
+\bqk
+
+Идёт к финалу игра в этот раз,
+А ты всё так же молчишь, я говорю.
+Минут пятнадцать осталось до утра,
+Не вызывай --- так словлю и свалю.
+\bqk
+
+Попробуем всё подшить, не ворошить,
+Мобильные номера постирать,
+И уходить, не спросив, нету сил,
+Давай попробуем заново всё собрать.
+\endverse
+
+\endsong
